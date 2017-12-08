@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Guess that letter</title>
+  </head>
+  <body>
+
+    <h1>My guessing game!</h1>
+
+    <div class="losses">
+<div class="guess">Guess what letter I'm thiking of.</div>
+</div>
+    <script type="text/javascript">
+
+        //These are your letters to guess from.
+    var computerChoices = ["a", "b", 
+
+"c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    //This is where the point will be.
+  
+    var youGuessedIt =0;
+    var wrongGuesses = 0;
+    var  guesses = 9;
+    document.onkeyup = function(event) {
+    //These will be the keys that will allow make the game work
+     var userGuess  = event.key;
+   
+ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+ //console.log(computerGuess);
+      if (userGuess ===  "a", "b", 
+
+"c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"){
+
+
+
+ //If you press these keys the user will collect a point.
+        if (userGuess === "g","u","e","s","m","y","d","n") {
+         youGuessedIt++ && guesses --;
+        } 
+    
+
+    // Guesses will be deducted if wrongly guessed. 
+    //else  userGuess ==="a","b","l","w","q","h","f","v";{
+    //guesses--;
+    //};
+    
+
+        else computerGuess !== "a","b","l","w","q","h","f","v"; {
+            wrongGuesses++; }
+    var goBack = 9
+    if (guesses < 0 ){  
+
+    return  guesses;    
+    };
+    
+   
+
+       // // If we choose the same thing as the computer, increment our ties variable.
+       //  if (computerChoices.length<0) {
+       //    guesses --;
+       //  }
+     var u = "<p>Take a guess:" + userGuess + "</p>" +
+     "<p>Keep Guessing: " + computerGuess + "</p>" +
+          "<p>You guess it: " + youGuessedIt + "</p>" +
+           "<p>Wrong Guesses: " + wrongGuesses + "</p>" +
+            "<p>Guesses: " + guesses + "</p>" 
+       //var yourTurn = "<h3> " + youGuess + "</h3>" 
+            //document.querySelector('#losses').innerHTML =yourTurn;
+        document.querySelector('.guess' &&'.losses').innerHTML = u;
+       
+  }
+    };
+
+
+    </script>
+
+  </body>
+</html>
